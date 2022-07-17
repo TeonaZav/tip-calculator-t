@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/logo.svg" alt="logo" class="logo" />
+    </header>
+    <div class="calculator-container">
+      <div class="calculator">
+        <section class="section-1">
+          <!-- <form class="form"> -->
+          <div class="total-bill-container">
+            <div class="labels">
+              <label for="bill">Bill</label>
+              <label for="bill" class="error-b"></label>
+            </div>
+
+            <div id="bill-box" class="bill-container">
+              <img src="images/icon-dollar.svg" class="currency-icon" />
+              <input
+                id="bill"
+                type="number"
+                class="main-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <!-- BUTTONS -->
+          <div class="buttons-container">
+            <label for="buttons" class="label-buttons">Select Tip %</label>
+            <div id="buttons" class="calculator-buttons">
+              <button class="calculator-button btn" value="0.05">5%</button>
+              <button class="calculator-button btn" value="0.1">10%</button>
+              <button class="calculator-button btn" value="0.15">15%</button>
+              <button class="calculator-button btn" value="0.25">25%</button>
+              <button class="calculator-button btn" value="0.5">50%</button>
+              <input
+                type="number"
+                class="calculator-button custom-percentage"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <!-- </form> -->
+          <div class="total-n-people">
+            <div class="labels">
+              <label for="people-box" class="people-title-left"
+                >Number of People</label
+              >
+              <label for="people-box" class="error-p"></label>
+            </div>
+
+            <div id="people-box" class="people-container">
+              <img src="images/icon-person.svg" class="person-icon" />
+              <input
+                id="people"
+                type="number"
+                class="person-input"
+                value=""
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="section-2">
+          <div class="outputs-container">
+            <div class="output-box">
+              <p class="output-title">Tip Amount <br /><span>/ person</span></p>
+              <output class="output-tip" name="result"
+                ><span>$</span>0.00</output
+              >
+            </div>
+            <div class="output-box">
+              <p class="output-title">Total <br /><span>/ person</span></p>
+              <output class="output-total" name="result"
+                ><span>$</span>0.00</output
+              >
+            </div>
+          </div>
+          <button type="button" id="reset" class="reset">Reset</button>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

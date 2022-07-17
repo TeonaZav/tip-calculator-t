@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
+  width: 100vw;
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  overflow-x: hidden !important;
+  background-color: hsl(185, 41%, 84%);
+}
+/*GENERALS*/
+/*********************************/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14.4rem;
+  width: 100vw;
+}
+
+label {
+  display: inline-block;
+  color: #5e7a7d;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.38rem;
+  margin-bottom: 0.6rem;
+}
+
+/******************** SECTION 1 ****************/
+/**********************************************/
+.section-1 {
+  padding: 3.2rem 3.2rem 0rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+.calculator-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.calculator {
+  display: flex;
+  justify-content: flex-start;
+  gap: 3.2rem;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 3.2rem 4.3rem rgba(79, 166, 175, 0.200735);
+  width: 37.5rem;
+  height: 78.9rem;
+  border-radius: 2.5rem;
+}
+.label-buttons {
+  margin-bottom: 1.6rem;
+  align-self: flex-start;
+}
+.main-input,
+.person-input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0.6rem 1.7rem 0.6rem 1.9rem;
+  width: 31.1rem;
+  height: 4.8rem;
+  border-radius: 5px;
+  background-color: hsl(189, 41%, 97%);
+  color: #00474b;
+  text-align: right;
+  border: none;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+.main-input::placeholder,
+.person-input::placeholder {
+  color: #9ebbbd;
+  text-align: right;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+.main-input:focus,
+.person-input:focus {
+  border: 0.2rem solid #26c2ae;
+  outline: none;
+}
+/******** Bill Input, number of persons ****/
+
+.bill-container,
+.people-container {
+  position: relative;
+}
+.currency-icon,
+.person-icon {
+  position: absolute;
+  left: 1.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/************ buttons ***************/
+.calculator-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  align-content: center;
+  justify-content: center;
+  column-gap: 1.7rem;
+  row-gap: 1.6rem;
+  width: 100%;
+}
+.calculator-button,
+.custom-percentage {
+  height: 4.8rem;
+  width: 14.67rem;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  text-align: center;
+  border: none;
+  transition: all 0.3s;
+}
+.calculator-button {
+  cursor: pointer;
+  background-color: #00474b;
+  color: #ffffff;
+}
+.custom-percentage {
+  cursor: auto;
+}
+.calculator-button:hover,
+.calculator-button:active {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+.reset:hover:enabled,
+.reset:active:enabled {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+.custom-percentage:active,
+.custom-percentage:hover {
+  background-color: hsl(189, 41%, 97%);
+  color: #00474b;
+  transition: all 0.3s;
+}
+.calculator-button:active {
+  background-color: #00474b;
+  color: #ffffff;
+}
+
+.btn-active {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+.btn-active-calc {
+  background-color: #26c2ae;
+  color: #00474b;
+}
+.custom-percentage {
+  background-color: #f3f9fa;
+  color: #00474b;
+  outline-color: #26c2ae;
+}
+.custom-percentage::placeholder {
+  color: #547878;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.section-2 {
+  width: 32.7rem;
+  height: 25.7rem;
+  background-color: #00474b;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3.9rem 2.2rem 2.4rem 2.4rem;
+}
+
+.reset {
+  width: 28.1rem;
+  height: 4.8rem;
+  background-color: #26c2ae;
+  color: #00474b;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  line-height: 2.96rem;
+  text-transform: uppercase;
+}
+.reset:enabled {
+  cursor: pointer;
+}
+.outputs-container {
+  display: flex;
+  flex-direction: column;
+}
+.output-tip,
+.output-total {
+  font-size: 3.2rem;
+  line-height: 4.7rem;
+  letter-spacing: -0.67px;
+  color: #26c2ae;
+}
+.output-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.output-title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: #ffffff;
+}
+.output-title span {
+  color: #7f9d9f;
+  font-size: 1.3rem;
+  line-height: 1.93rem;
+  font-weight: 700;
+}
+/********************* additional classes ****************/
+
+.invalid {
+  font-size: 1.6rem;
+  line-height: 2.37rem;
+  color: #e17457;
+}
+.invalid-input {
+  border: 2px solid #e17457;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* more than 1440PX (for desktop )*/
+@media (min-width: 90em) {
+  .calculator {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    gap: 4.8rem;
+    width: 92rem;
+    height: 48.1rem;
+    align-items: center;
+  }
+  .section-1 {
+    padding: 4.8rem 0rem 4.8rem 0rem;
+    gap: 4rem;
+  }
+  .section-2 {
+    width: 41.3rem;
+    height: 41.7rem;
+
+    padding: 5.6rem 4rem 4rem 4rem;
+  }
+  .header {
+    height: 30.4rem;
+  }
+  .logo {
+    width: 8.67rem;
+    height: 5.3rem;
+  }
+  /******************** SECTION 1 ****************/
+  /**********************************************/
+
+  .main-input,
+  .person-input {
+    width: 37.9rem;
+  }
+
+  /******** Bill Input, number of persons ****/
+
+  .bill-container,
+  .people-container {
+    position: relative;
+  }
+
+  /************ buttons ***************/
+  .calculator-buttons {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.4rem;
+    row-gap: 1.6rem;
+  }
+  .calculator-button,
+  .custom-percentage {
+    height: 4.8rem;
+    width: 11.7rem;
+  }
+
+  .custom-percentage {
+    background-color: #f3f9fa;
+    color: #00474b;
+    outline-color: #26c2ae;
+  }
+  .btn-active {
+    background-color: #9fe8df;
+    color: #00474b;
+  }
+
+  .reset {
+    width: 33.3rem;
+    background-color: #0d686d;
+    color: #00474b;
+  }
+  .btn-active-calc {
+    background-color: #26c2ae;
+    color: #00474b;
+  }
+  .output-tip,
+  .output-total {
+    font-size: 4.8rem;
+    line-height: 7.1rem;
+  }
+}
+
+
