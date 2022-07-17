@@ -31,5 +31,5 @@ Our challenge was to build out this tip calculator app using any tools, and get 
 
 ## URL
 
-https://tip-calculator-t.netlify.app/
+https://tip-calculator-t.netlify.app/   <br />
 https://teonazav.github.io/tip-calculator-t/
